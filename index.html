@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LC Order Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="sidebar">
+    <h2>LC Order Manager</h2>
+
+    <button onclick="showPage('dashboard')">🏠 Dashboard</button>
+    <button onclick="showPage('orders')">📦 Orders</button>
+    <button onclick="showPage('customers')">👥 Customers</button>
+    <button onclick="showPage('products')">🛍 Products</button>
+    <button onclick="showPage('payments')">💰 Payments</button>
+    <button onclick="showPage('reports')">📊 Reports</button>
+    <button onclick="showPage('settings')">⚙ Settings</button>
+</div>
+
+<div class="content">
+
+<section id="dashboard">
+
+<h1>Dashboard</h1>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Total Orders</h3>
+<h2 id="totalOrders">0</h2>
+</div>
+
+<div class="card">
+<h3>Total Sales</h3>
+<h2>Rs.<span id="totalSales">0</span></h2>
+</div>
+
+<div class="card">
+<h3>Pending Balance</h3>
+<h2>Rs.<span id="pendingBalance">0</span></h2>
+</div>
+
+<div class="card">
+<h3>Delivered</h3>
+<h2 id="deliveredOrders">0</h2>
+</div>
+
+</div>
+
+</section>
+
+<section id="orders" style="display:none;">
+
+<h1>Orders</h1>
+
+<button onclick="addOrder()">+ Add Order</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order No</th>
+<th>Customer</th>
+<th>Product</th>
+<th>Total</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="orderTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="customers" style="display:none;">
+<h1>Customers</h1>
+</section>
+
+<section id="products" style="display:none;">
+<h1>Products</h1>
+</section>
+
+<section id="payments" style="display:none;">
+<h1>Payments</h1>
+</section>
+
+<section id="reports" style="display:none;">
+<h1>Reports</h1>
+</section>
+
+<section id="settings" style="display:none;">
+<h1>Settings</h1>
+</section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
